@@ -100,5 +100,13 @@ public class Main {
             for (int i = 0; i < clients; i++)
                 runClient(i, "127.0.0.1", tcpPort, udpPort);
         }
+
+        //noinspection InfiniteLoopStatement
+        while (true) {
+            try {
+                Thread.sleep(Long.MAX_VALUE);
+            } catch (InterruptedException ignored) {
+            }
+        }
     }
 }
